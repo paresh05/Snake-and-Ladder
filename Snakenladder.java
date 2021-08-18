@@ -1,6 +1,9 @@
 package com.bridgelabz;
 
 public class Snakenladder {
+	public static final int NO_PLAY=1;
+	public static final int LADDER=2;
+	public static final int SNAKE=3;
 	
 	public static void main(String[] args) {
 		
@@ -9,6 +12,23 @@ public class Snakenladder {
 		System.out.println("Roll the Dice Player A");
 		int dice1= ((int) Math.floor(Math.random()*10)%6)+1;
 		System.out.println("Player A, the value is " + dice1);
-		
+		int nextmove1=(int) Math.floor(Math.random()*10)%4;
+		switch(nextmove1) {
+		case NO_PLAY:
+			positionplayer1+=0;
+			System.out.println("No Play");
+			break;
+		case LADDER:
+			positionplayer1+=dice1;
+			System.out.println("Ladder!");
+			break;
+		case SNAKE:
+			positionplayer1-=dice1;
+			System.out.println("Snake");
+			break;
+		default:
+			positionplayer1+=dice1;
+			System.out.println("Move "+dice1);
+		}
 	}
 }
