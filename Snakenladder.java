@@ -36,6 +36,8 @@ public class Snakenladder {
 			if(positionplayer1<0)
 				positionplayer1=0;
 			System.out.println("The position of Player A is "+positionplayer1);
+			if(positionplayer1>100)
+				positionplayer1-=dice1;
 		}
 		
 		System.out.println("The Position of Player A is: "+positionplayer1);
